@@ -1,11 +1,24 @@
-import './App.css'
+import "./user.css"
+import user from "./user.json"
+import { UserCard } from "./UserCard"
+import { UserCardClass } from "./UserCardClass"
 
-function App() {
+export default function App() {
   return (
-    <>
-      <h1>Vite + React</h1>
-    </>
+    <div>
+      <UserCard
+        name={user.name}
+        phoneNumber={user.phoneNumber}
+        age={user.age}
+        address={user.address}
+      />
+      <br />
+      <UserCardClass
+        name={user.name}
+        phoneNumber={user.phoneNumber}
+        age={user.age}
+        address={user.address}
+      />
+    </div>
   )
 }
-
-export default App
